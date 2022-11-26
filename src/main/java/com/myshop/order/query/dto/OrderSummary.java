@@ -28,7 +28,8 @@ import java.time.LocalDateTime;
             cross join product p
         where
         ol.line_idx = 0
-        and ol.product_id = p.product_id"""
+        and ol.product_id = p.product_id
+        """
 )
 @Synchronize({"purchase_order", "order_line", "product"})
 public class OrderSummary {
